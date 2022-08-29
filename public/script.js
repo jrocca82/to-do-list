@@ -8,14 +8,14 @@ let redirect = (tag) => {
 	window.location = "/tasks/update/" + tag.className;
 };
 
-function addNewTask(tag){
-    if(document.getElementById('new-task').style.display === 'block'){
-        document.getElementById('new-task').style.display = 'none';
-        tag.innerText = 'Add New Task';
-    }else{
-        document.getElementById('new-task').style.display = 'block';
-        tag.innerText = 'Close';
-    }
+function addNewTask(tag) {
+	if (document.getElementById("new-task").style.display === "block") {
+		document.getElementById("new-task").style.display = "none";
+		tag.innerText = "Add New Task";
+	} else {
+		document.getElementById("new-task").style.display = "block";
+		tag.innerText = "Close";
+	}
 }
 
 window.onload = async () => {

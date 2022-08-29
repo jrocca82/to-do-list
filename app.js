@@ -4,7 +4,8 @@ const bodyParser = require("body-parser");
 const mongo = require("mongodb");
 const mongoClient = mongo.MongoClient;
 let ObjectId = mongo.ObjectId;
-const url = "mongodb://127.0.0.1:27017";
+const url = process.env.MONGO_URL || "mongodb://127.0.0.1:27017";
+const port = process.env.PORT || 3000;
 
 app.use("/", express.static(__dirname + "/public"));
 
@@ -88,4 +89,4 @@ app.get("/", function (req, res) {
 	res.render("index");
 });
 
-app.listen(8080);
+app.listen(port);
