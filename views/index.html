@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My To Do List</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel='stylesheet' href='./style.css' />
+	<link rel="manifest" href="/manifest.json">
+	<link rel="shortcut icon" href="/todo.png"/>
+</head>
+<body>
+	<p class="todo-title">To Do List</p>
+	<hr/>
+	<button class="add-item" onclick="addNewTask(this)">Add New Task</button>
+	<div id="new-task" class="new-task">
+		<form action='/tasks/new/' method='post'>
+			<input type="text" name="description" placeholder="Write your task"   />
+			<button type='submit' class="submit">Add Task</button>
+		</form>
+	</div>
+
+	<div id="tasks">
+	</div>
+
+	<script src='script.js'></script>
+</body>
+</html>
